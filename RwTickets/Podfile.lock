@@ -1,26 +1,40 @@
 PODS:
+  - KDCalendar (1.8.0):
+    - KDCalendar/EventManager (= 1.8.0)
+  - KDCalendar/EventManager (1.8.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SkyFloatingLabelTextField (3.7.0)
+  - SwiftSoup (2.2.0)
 
 DEPENDENCIES:
+  - KDCalendar
   - RxCocoa
   - RxSwift
+  - SkyFloatingLabelTextField
+  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KDCalendar
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SkyFloatingLabelTextField
+    - SwiftSoup
 
 SPEC CHECKSUMS:
+  KDCalendar: 24724d2f7d951d0a2376a2131210ac9fd0dbd805
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+  SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
 
-PODFILE CHECKSUM: 4b95ecb57e55d5ceb8cd1ac6009055eb6646158c
+PODFILE CHECKSUM: 3429700868bd9fb6aec39f052e957ef140a1175f
 
 COCOAPODS: 1.7.3

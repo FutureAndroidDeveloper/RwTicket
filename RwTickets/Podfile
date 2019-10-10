@@ -6,6 +6,17 @@ target 'RwTickets' do
   use_frameworks!
 
   # Pods for RwTickets
+
+  # Rx
   pod 'RxSwift'
   pod 'RxCocoa'
+
+  # TextField
+  pod 'SkyFloatingLabelTextField'
+
+  # Calendar
+  pod 'KDCalendar'
+
+  # Html Parser
+  pod 'SwiftSoup'
 end

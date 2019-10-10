@@ -1,4 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-RwTickets/Pods-RwTickets-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KDCalendar/KDCalendar.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework
+${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework
