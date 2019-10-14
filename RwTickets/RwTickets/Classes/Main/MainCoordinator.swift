@@ -24,7 +24,11 @@ class MainCoordinator: BaseCoordinator<Void> {
         
         mainViewController.viewModel = mainViewModel
         
-        // bindings
+        mainViewModel.searchTapped
+            .subscribe(onNext: { _ in
+                print("search")
+            })
+            .disposed(by: disposeBag)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

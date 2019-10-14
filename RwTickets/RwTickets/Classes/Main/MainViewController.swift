@@ -45,24 +45,7 @@ class MainViewController: UIViewController, StoryboardInitializable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
-        dateTextField.rx.controlEvent(.editingDidBegin)
-            .subscribe(onNext: { _ in
-                self.showCalendar()
-            })
-            .disposed(by: bag)
-        
-        dateTextField.rx.controlEvent(.editingDidEnd)
-            .subscribe(onNext: { _ in
-                self.hideCalendar()
-            })
-            .disposed(by: bag)
-        
-        searchButton.rx.tap
-            .subscribe(onNext: { _ in
-//                self.animateSetupView()
-            })
-            .disposed(by: bag)
+        setupBindings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +65,52 @@ class MainViewController: UIViewController, StoryboardInitializable {
     
     // MARK: - Private Methods
     
+    private func setupBindings() {
+        dateTextField.rx.controlEvent(.editingDidBegin)
+            .subscribe(onNext: { [weak self] _ in
+                self?.showCalendar()
+            })
+            .disposed(by: bag)
+        
+        dateTextField.rx.controlEvent(.editingDidEnd)
+            .subscribe(onNext: { [weak self] _ in
+                self?.hideCalendar()
+            })
+            .disposed(by: bag)
+        
+        searchButton.rx.tap
+            .bind(to: viewModel.search)
+            .disposed(by: bag)
+        
+        departureCityTextField.rx.text
+            .bind(to: viewModel.departureCity)
+            .disposed(by: bag)
+        
+        arrivalCityTextField.rx.text
+            .bind(to: viewModel.arrivalCity)
+            .disposed(by: bag)
+        
+        dateTextField.rx.text
+            .bind(to: viewModel.date)
+            .disposed(by: bag)
+        
+        viewModel.departureError
+            .bind(to: departureCityTextField.rx.error)
+            .disposed(by: bag)
+        
+        viewModel.arrivalError
+            .bind(to: arrivalCityTextField.rx.error)
+            .disposed(by: bag)
+        
+        viewModel.dateError
+            .bind(to: dateTextField.rx.error)
+            .disposed(by: bag)
+    }
+    
     private func setupView() {
+        let emptyKeyboardView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        dateTextField.inputView = emptyKeyboardView
+        
         searchButton.layer.cornerRadius = searchButton.frame.width / 5
         searchButton.alpha = 0
         searchTopConstraint = NSLayoutConstraint(item: searchButton, attribute: .top, relatedBy: .equal,
@@ -222,32 +250,24 @@ extension MainViewController: CalendarViewDataSource {
 }
 
 extension MainViewController: CalendarViewDelegate {
-    
-    /* optional */
-    //    func calendar(_ calendar : CalendarView, canSelectDate date : Date) -> Bool
-    //    func calendar(_ calendar : CalendarView, didDeselectDate date : Date) -> Void
-    //    func calendar(_ calendar : CalendarView, didLongPressDate date : Date, withEvents events: [CalendarEvent]?) -> Void
-    
     func calendar(_ calendar: CalendarView, didScrollToMonth date: Date) {
-        
     }
-    
+
     func calendar(_ calendar: CalendarView, didSelectDate date: Date, withEvents events: [CalendarEvent]) {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.dateFormat = "dd.MM.YYYY"
-        self.dateTextField.text = dateFormatter.string(from: date)
+        viewModel.date.onNext(dateFormatter.string(from: date))
+        dateTextField.text = dateFormatter.string(from: date)
     }
-    
+
     func calendar(_ calendar: CalendarView, canSelectDate date: Date) -> Bool {
         return date >= startCalendarDate && date <= endCalendarDate
     }
-    
+
     func calendar(_ calendar: CalendarView, didDeselectDate date: Date) {
-        
     }
-    
+
     func calendar(_ calendar: CalendarView, didLongPressDate date: Date, withEvents events: [CalendarEvent]?) {
-        
     }
 }
