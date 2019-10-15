@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		259ABB42A1AB55D0C4128A67 /* Pods_RwTickets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487258178AB5F332EC38AFE3 /* Pods_RwTickets.framework */; };
 		59017BD323548D4900C4EE90 /* ValidateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BD223548D4900C4EE90 /* ValidateService.swift */; };
+		59017BDC2354D60300C4EE90 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BDB2354D60300C4EE90 /* ScheduleViewModel.swift */; };
+		59017BDE2354D61500C4EE90 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BDD2354D61500C4EE90 /* ScheduleCoordinator.swift */; };
+		59017BE02354D63E00C4EE90 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BDF2354D63E00C4EE90 /* ScheduleViewController.swift */; };
+		59017BE62354DD6300C4EE90 /* TrainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59017BE42354DD6300C4EE90 /* TrainTableViewCell.xib */; };
+		59017BE72354DD6300C4EE90 /* TrainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BE52354DD6300C4EE90 /* TrainTableViewCell.swift */; };
+		59017BEA2354DE5C00C4EE90 /* PlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BE82354DE5C00C4EE90 /* PlaceInfoView.swift */; };
+		59017BEB2354DE5C00C4EE90 /* PlaceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59017BE92354DE5C00C4EE90 /* PlaceInfoView.xib */; };
+		59017BEE2354DEF600C4EE90 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BED2354DEF600C4EE90 /* Train.swift */; };
+		59017BF02354DF4500C4EE90 /* TrainPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BEF2354DF4500C4EE90 /* TrainPlace.swift */; };
+		59017BF22354E69000C4EE90 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BF12354E69000C4EE90 /* NetworkService.swift */; };
+		59017BF42354E6AA00C4EE90 /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BF32354E6AA00C4EE90 /* ParseService.swift */; };
 		5960D12B234BF2960022EDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960D12A234BF2960022EDD1 /* AppDelegate.swift */; };
 		5960D12D234BF2960022EDD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960D12C234BF2960022EDD1 /* MainViewController.swift */; };
 		5960D130234BF2960022EDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5960D12E234BF2960022EDD1 /* Main.storyboard */; };
 		5960D132234BF2970022EDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5960D131234BF2970022EDD1 /* Assets.xcassets */; };
 		5960D135234BF2970022EDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5960D133234BF2970022EDD1 /* LaunchScreen.storyboard */; };
 		59B5F1D12350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5F1D02350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift */; };
+		59BD0B9C2355EB010046F3FF /* TrainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD0B9B2355EB010046F3FF /* TrainRoute.swift */; };
 		59BD1C6F234EBDD600C24D0E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD1C6E234EBDD600C24D0E /* MainCoordinator.swift */; };
 		59BD1C71234EBDE000C24D0E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD1C70234EBDE000C24D0E /* MainViewModel.swift */; };
 		59DCCD0D234D3647003004E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCCD0C234D3647003004E9 /* AppCoordinator.swift */; };
@@ -26,6 +38,17 @@
 		2AAFA302A794B83B6FD7C199 /* Pods-RwTickets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RwTickets.release.xcconfig"; path = "Target Support Files/Pods-RwTickets/Pods-RwTickets.release.xcconfig"; sourceTree = "<group>"; };
 		487258178AB5F332EC38AFE3 /* Pods_RwTickets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RwTickets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59017BD223548D4900C4EE90 /* ValidateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateService.swift; sourceTree = "<group>"; };
+		59017BDB2354D60300C4EE90 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		59017BDD2354D61500C4EE90 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
+		59017BDF2354D63E00C4EE90 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		59017BE42354DD6300C4EE90 /* TrainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainTableViewCell.xib; sourceTree = "<group>"; };
+		59017BE52354DD6300C4EE90 /* TrainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainTableViewCell.swift; sourceTree = "<group>"; };
+		59017BE82354DE5C00C4EE90 /* PlaceInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoView.swift; sourceTree = "<group>"; };
+		59017BE92354DE5C00C4EE90 /* PlaceInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceInfoView.xib; sourceTree = "<group>"; };
+		59017BED2354DEF600C4EE90 /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
+		59017BEF2354DF4500C4EE90 /* TrainPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPlace.swift; sourceTree = "<group>"; };
+		59017BF12354E69000C4EE90 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		59017BF32354E6AA00C4EE90 /* ParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
 		5960D127234BF2960022EDD1 /* RwTickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RwTickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5960D12A234BF2960022EDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5960D12C234BF2960022EDD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +57,7 @@
 		5960D134234BF2970022EDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5960D136234BF2970022EDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B5F1D02350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkyFloatingLabelTextField+Rx.swift"; sourceTree = "<group>"; };
+		59BD0B9B2355EB010046F3FF /* TrainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainRoute.swift; sourceTree = "<group>"; };
 		59BD1C6E234EBDD600C24D0E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		59BD1C70234EBDE000C24D0E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		59DCCD0C234D3647003004E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -65,6 +89,7 @@
 		59017BD423548DBE00C4EE90 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				59017BD82354D5A700C4EE90 /* Schedule */,
 				59BD1C72234EC70200C24D0E /* Main */,
 			);
 			path = Classes;
@@ -76,6 +101,54 @@
 				59B5F1D02350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59017BD82354D5A700C4EE90 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				59017BE12354DCF400C4EE90 /* Custom View */,
+				59017BDF2354D63E00C4EE90 /* ScheduleViewController.swift */,
+				59017BDB2354D60300C4EE90 /* ScheduleViewModel.swift */,
+				59017BDD2354D61500C4EE90 /* ScheduleCoordinator.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		59017BE12354DCF400C4EE90 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				59017BE32354DD2300C4EE90 /* Place View */,
+				59017BE22354DD1000C4EE90 /* Train Cell */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		59017BE22354DD1000C4EE90 /* Train Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59017BE52354DD6300C4EE90 /* TrainTableViewCell.swift */,
+				59017BE42354DD6300C4EE90 /* TrainTableViewCell.xib */,
+			);
+			path = "Train Cell";
+			sourceTree = "<group>";
+		};
+		59017BE32354DD2300C4EE90 /* Place View */ = {
+			isa = PBXGroup;
+			children = (
+				59017BE82354DE5C00C4EE90 /* PlaceInfoView.swift */,
+				59017BE92354DE5C00C4EE90 /* PlaceInfoView.xib */,
+			);
+			path = "Place View";
+			sourceTree = "<group>";
+		};
+		59017BEC2354DEC000C4EE90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59017BED2354DEF600C4EE90 /* Train.swift */,
+				59017BEF2354DF4500C4EE90 /* TrainPlace.swift */,
+				59BD0B9B2355EB010046F3FF /* TrainRoute.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5960D11E234BF2960022EDD1 = {
@@ -99,6 +172,7 @@
 		5960D129234BF2960022EDD1 /* RwTickets */ = {
 			isa = PBXGroup;
 			children = (
+				59017BEC2354DEC000C4EE90 /* Model */,
 				59DCCD0B234D3625003004E9 /* Coordinator */,
 				59017BD723549AA400C4EE90 /* Extensions */,
 				59BD1C6D234EBDA000C24D0E /* Services */,
@@ -116,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				59017BD223548D4900C4EE90 /* ValidateService.swift */,
+				59017BF12354E69000C4EE90 /* NetworkService.swift */,
+				59017BF32354E6AA00C4EE90 /* ParseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5960D135234BF2970022EDD1 /* LaunchScreen.storyboard in Resources */,
+				59017BE62354DD6300C4EE90 /* TrainTableViewCell.xib in Resources */,
 				5960D132234BF2970022EDD1 /* Assets.xcassets in Resources */,
+				59017BEB2354DE5C00C4EE90 /* PlaceInfoView.xib in Resources */,
 				5960D130234BF2960022EDD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,15 +342,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BD0B9C2355EB010046F3FF /* TrainRoute.swift in Sources */,
 				59BD1C71234EBDE000C24D0E /* MainViewModel.swift in Sources */,
+				59017BF42354E6AA00C4EE90 /* ParseService.swift in Sources */,
+				59017BDE2354D61500C4EE90 /* ScheduleCoordinator.swift in Sources */,
 				59B5F1D12350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift in Sources */,
+				59017BE02354D63E00C4EE90 /* ScheduleViewController.swift in Sources */,
 				59017BD323548D4900C4EE90 /* ValidateService.swift in Sources */,
+				59017BF22354E69000C4EE90 /* NetworkService.swift in Sources */,
 				5960D12D234BF2960022EDD1 /* MainViewController.swift in Sources */,
 				59BD1C6F234EBDD600C24D0E /* MainCoordinator.swift in Sources */,
+				59017BDC2354D60300C4EE90 /* ScheduleViewModel.swift in Sources */,
+				59017BEA2354DE5C00C4EE90 /* PlaceInfoView.swift in Sources */,
 				59F949CF234D2D4500732057 /* BaseCoordinator.swift in Sources */,
 				59DCCD0D234D3647003004E9 /* AppCoordinator.swift in Sources */,
 				59F949D1234D301200732057 /* StoryboardInitializable.swift in Sources */,
 				5960D12B234BF2960022EDD1 /* AppDelegate.swift in Sources */,
+				59017BEE2354DEF600C4EE90 /* Train.swift in Sources */,
+				59017BF02354DF4500C4EE90 /* TrainPlace.swift in Sources */,
+				59017BE72354DD6300C4EE90 /* TrainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

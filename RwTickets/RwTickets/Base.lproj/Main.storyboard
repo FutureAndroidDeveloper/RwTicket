@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGm-sx-1fo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="43" y="170" width="234" height="40"/>
+                                                <rect key="frame" x="31.5" y="170" width="257" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bXM-zG-i2b"/>
                                                 </constraints>
@@ -64,7 +64,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-kv-GH8" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="43" y="240" width="234" height="40"/>
+                                                <rect key="frame" x="31.5" y="240" width="257" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="2nR-9t-ei6"/>
                                                 </constraints>
@@ -133,7 +133,7 @@
                                                 </state>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fE-7Q-CIg" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="43" y="100" width="234" height="40"/>
+                                                <rect key="frame" x="31.5" y="100" width="257" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Gxs-FJ-J8j"/>
                                                 </constraints>
@@ -228,6 +228,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="39.375" y="26.408450704225352"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="vjg-Xq-Bvx">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleViewController" id="4mS-MD-CQm" customClass="ScheduleViewController" customModule="RwTickets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OtT-eA-Xim">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hm5-13-zVD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hm5-13-zVD" firstAttribute="bottom" secondItem="XdA-f8-V2x" secondAttribute="bottom" id="6YM-DL-Cva"/>
+                            <constraint firstItem="hm5-13-zVD" firstAttribute="top" secondItem="XdA-f8-V2x" secondAttribute="top" id="FH0-XX-4Cc"/>
+                            <constraint firstItem="hm5-13-zVD" firstAttribute="trailing" secondItem="XdA-f8-V2x" secondAttribute="trailing" id="eqc-el-qk2"/>
+                            <constraint firstItem="hm5-13-zVD" firstAttribute="leading" secondItem="XdA-f8-V2x" secondAttribute="leading" id="mse-eA-Mmb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XdA-f8-V2x"/>
+                    </view>
+                    <connections>
+                        <outlet property="trainTableView" destination="hm5-13-zVD" id="pui-5S-4aB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsp-pI-A5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817.5" y="25.35211267605634"/>
         </scene>
     </scenes>
     <resources>

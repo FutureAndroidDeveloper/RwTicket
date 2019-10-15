@@ -25,6 +25,7 @@ class MainCoordinator: BaseCoordinator<Void> {
         mainViewController.viewModel = mainViewModel
         
         mainViewModel.searchTapped
+            .flatMap { self.showScheduleViewController(in: navigationController, with: $0) }
             .subscribe(onNext: { _ in
                 print("search")
             })
@@ -34,5 +35,11 @@ class MainCoordinator: BaseCoordinator<Void> {
         window.makeKeyAndVisible()
         
         return .never()
+    }
+    
+    private func showScheduleViewController(in rootNavigationController: UINavigationController,
+                                            with route: TrainRoute) -> Observable<Void> {
+        let scheduleCoordinator = ScheduleCoordinator(navigationController: rootNavigationController, trainRoute: route)
+        return coordinate(to: scheduleCoordinator)
     }
 }

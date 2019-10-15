@@ -8,11 +8,11 @@
 
 import Foundation
 
+typealias TravelData = (departure: String?, depError: String?,
+    arrival: String?,arrError: String?,
+    date: String?, dateError: String?)
+
 class ValidateService {
-    typealias TravelData = (departure: String?, depError: String?,
-        arrival: String?,arrError: String?,
-        date: String?, dateError: String?)
-    
     func isRussian(text: String) -> Bool {
         let inRussianRegEx = "^[а-яА-Я0-9_ ]*$"
         let predicate = NSPredicate(format:"SELF MATCHES %@", inRussianRegEx)

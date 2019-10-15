@@ -37,6 +37,7 @@ class MainViewController: UIViewController, StoryboardInitializable {
     private var calendarView: CalendarView!
     private var startCalendarDate: Date!
     private var endCalendarDate: Date!
+    private var buttonSpace: CGFloat = 50
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -115,9 +116,9 @@ class MainViewController: UIViewController, StoryboardInitializable {
         searchButton.alpha = 0
         searchTopConstraint = NSLayoutConstraint(item: searchButton, attribute: .top, relatedBy: .equal,
                                                  toItem: dateTextField, attribute: .bottom,
-                                                 multiplier: 1.0, constant: 50)
+                                                 multiplier: 1.0, constant: buttonSpace)
         
-        searchTopConstraint.constant += 50
+        searchTopConstraint.constant += buttonSpace
         searchTopConstraint.isActive = true
         departureCityTopConstraint.constant = view.frame.height / 10
         
@@ -157,7 +158,7 @@ class MainViewController: UIViewController, StoryboardInitializable {
             self.view.layoutIfNeeded()
         }, completion: nil)
         
-        searchTopConstraint.constant -= 50
+        searchTopConstraint.constant = buttonSpace
         UIView.animate(withDuration: 0.6, delay: 0.7, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: [], animations: {
             self.searchButton.alpha = 1
             self.view.layoutIfNeeded()
