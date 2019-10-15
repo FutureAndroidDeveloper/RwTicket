@@ -31,17 +31,29 @@ class TrainTableViewCell: UITableViewCell {
     }
     
     
-    func configure(train: Train) {
+    func configure(train: Train, date: String) {
         self.departureTimeLabel.text = train.departureTime
         self.arrivalTimeLabel.text = train.arrivalTime
         self.arrivalDateLabel.text = train.arrivalDate
         self.trainTypeImageView.image = UIImage(named: String(describing: train.type))
         self.fullNameLabel.text = "\(train.number) \(train.name)"
         self.placesStackView.removeAllArrangedSubviews()
+        highlightDepartedTrains(date: "\(date) \(train.departureTime)")
         
         for place in train.places {
             let view = buildPlaceInfoView(with: place)
             self.placesStackView.addArrangedSubview(view)
+        }
+    }
+    
+    private func highlightDepartedTrains(date: String) {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.timeZone = TimeZone(secondsFromGMT: 10800)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        
+        self.subviews.forEach { view in
+            view.alpha = Date() < formatter.date(from: date)! ? 1 : 0.6
         }
     }
     
