@@ -22,7 +22,7 @@ class MainViewModel {
     let departureError: Observable<String?>
     let arrivalError: Observable<String?>
     let dateError: Observable<String?>
-    let searchTapped: Observable<Void>
+    let searchTapped: Observable<TrainRoute>
     
     init(validateService: ValidateService = ValidateService()) {
         let _departureCity = PublishSubject<String?>()
@@ -104,6 +104,8 @@ class MainViewModel {
         // seacrh only when all fields are filled without errors
         searchTapped = _search.asObservable().withLatestFrom(travelData)
             .filter { validateService.validateTravelData($0) }
-            .map { _ in Void() }
+            .map { routeData -> TrainRoute in
+                return TrainRoute(from: routeData.0!, to: routeData.2!, date: routeData.4!)
+            }
     }
 }
