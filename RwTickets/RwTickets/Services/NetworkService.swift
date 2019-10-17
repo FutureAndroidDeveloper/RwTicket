@@ -20,6 +20,9 @@ class NetworkService {
     private let host: String!
     private let path: String!
     
+    private let apiToken = "703409987:AAGLD4IQ3bsRmckYWloy2SmnONDq1NVBj1A"
+    private let chatId = "@RwTickets"
+    
     init(scheme: SchemeType = SchemeType.https, host: String = "rasp.rw.by", path: String = "/ru/route") {
         self.scheme = scheme.rawValue
         self.host = host
@@ -49,6 +52,26 @@ class NetworkService {
         return URLSession.shared.rx
             .data(request: request)
             .compactMap { String(data: $0, encoding: .utf8) }
+            .take(1)
+    }
+    
+    func sendMessage(_ train: Train) -> Observable<String> {
+        let places = train.places.map { $0.description }.joined(separator: "\n")
+        let message = "\(train.departurDate ?? "")\n\(train.departureCity) -> \(train.arrivalCity)\n\(train.departureTime) -> \(train.arrivalTime) \(train.arrivalDate ?? "")\n\n\(places)"
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.telegram.org"
+        components.path = "/bot\(apiToken)/sendMessage"
+        components.queryItems = [
+            URLQueryItem(name: "chat_id", value: chatId),
+            URLQueryItem(name: "text", value: message)
+        ]
+        
+        guard let url = components.url else { return .empty() }
+        let request = URLRequest(url: url)
+        return URLSession.shared.rx.response(request: request)
+            .map { _ in places }
             .take(1)
     }
 }

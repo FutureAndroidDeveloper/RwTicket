@@ -26,7 +26,23 @@ class ScheduleCoordinator: BaseCoordinator<Void> {
         navigationController.pushViewController(scheduleViewController, animated: true)
         
         scheduleViewModel.route.onNext(trainRoute)
+        scheduleViewModel.trainDidSelect
+            .flatMap { [weak self] train -> Observable<Void> in
+                guard let self = self else { return .empty() }
+                return self.showDetailViewController(in: self.navigationController, with: train) }
+            .subscribe(onNext: { _ in
+                print("detail VC END")
+            })
+            .disposed(by: disposeBag)
         
-        return .never()
+        return navigationController.rx.willShow
+            .compactMap { $0.viewController as? MainViewController }
+            .map { _ in Void() }
+            .take(1)
+    }
+    
+    private func showDetailViewController(in navigationController: UINavigationController, with train: Train) -> Observable<Void> {
+        let detailCoordinator = DetailCoordinator(navigationController: navigationController, train: train)
+        return coordinate(to: detailCoordinator)
     }
 }

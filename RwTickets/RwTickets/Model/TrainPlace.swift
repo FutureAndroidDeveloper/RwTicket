@@ -13,3 +13,9 @@ struct TrainPlace {
     let placeCost: String
     let vacantPlace: Int?
 }
+
+extension TrainPlace: CustomStringConvertible {
+    var description: String {
+        return (placeType ?? "") + " " + placeCost.trimmingCharacters(in: CharacterSet.whitespaces) + " " + String((vacantPlace ?? 0))
+    }
+}

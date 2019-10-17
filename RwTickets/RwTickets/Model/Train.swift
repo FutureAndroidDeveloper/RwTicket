@@ -22,8 +22,22 @@ struct Train {
     let arrivalCity: String
     let departureTime: String
     let arrivalTime: String
+    var departurDate: String?
     let arrivalDate: String?
     let roadTime: String
     let type: TrainType
     let places: [TrainPlace]
+    
+    mutating func setDepartureDate(_ date: String) {
+        self.departurDate = date
+    }
+}
+
+extension Train: Equatable {
+    static func == (lhs: Train, rhs: Train) -> Bool {
+        return lhs.departureCity == rhs.departureCity &&
+            lhs.arrivalCity == rhs.arrivalCity &&
+            lhs.name == rhs.name &&
+            lhs.number == rhs.number
+    }
 }

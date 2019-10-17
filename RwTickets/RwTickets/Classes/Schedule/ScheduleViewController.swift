@@ -36,8 +36,14 @@ class ScheduleViewController: UIViewController, StoryboardInitializable {
     }
     
     private func setupBindings() {
+        trainTableView.rx
+            .modelSelected(Train.self)
+            .bind(to: viewModel.selectedTrain)
+            .disposed(by: bag)
+        
         viewModel.trains
-            .bind(to: trainTableView.rx.items(cellIdentifier: TrainTableViewCell.identifier, cellType: TrainTableViewCell.self)) { (row, element, cell) in
+            .bind(to: trainTableView.rx.items(cellIdentifier: TrainTableViewCell.identifier, cellType: TrainTableViewCell.self)) { [weak self] (row, element, cell) in
+                guard let self = self else { return }
                 cell.configure(train: element, date: self.title!)
             }
             .disposed(by: bag)

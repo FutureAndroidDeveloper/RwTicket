@@ -27,6 +27,9 @@
 		5960D135234BF2970022EDD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5960D133234BF2970022EDD1 /* LaunchScreen.storyboard */; };
 		59B5F1D12350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5F1D02350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift */; };
 		59BD0B9C2355EB010046F3FF /* TrainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD0B9B2355EB010046F3FF /* TrainRoute.swift */; };
+		59BD0B9F2356243F0046F3FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD0B9E2356243F0046F3FF /* DetailViewController.swift */; };
+		59BD0BA12356244E0046F3FF /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD0BA02356244E0046F3FF /* DetailCoordinator.swift */; };
+		59BD0BA32356245B0046F3FF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD0BA22356245B0046F3FF /* DetailViewModel.swift */; };
 		59BD1C6F234EBDD600C24D0E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD1C6E234EBDD600C24D0E /* MainCoordinator.swift */; };
 		59BD1C71234EBDE000C24D0E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BD1C70234EBDE000C24D0E /* MainViewModel.swift */; };
 		59DCCD0D234D3647003004E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCCD0C234D3647003004E9 /* AppCoordinator.swift */; };
@@ -58,6 +61,9 @@
 		5960D136234BF2970022EDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B5F1D02350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkyFloatingLabelTextField+Rx.swift"; sourceTree = "<group>"; };
 		59BD0B9B2355EB010046F3FF /* TrainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainRoute.swift; sourceTree = "<group>"; };
+		59BD0B9E2356243F0046F3FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		59BD0BA02356244E0046F3FF /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		59BD0BA22356245B0046F3FF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		59BD1C6E234EBDD600C24D0E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		59BD1C70234EBDE000C24D0E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		59DCCD0C234D3647003004E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		59017BD423548DBE00C4EE90 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				59BD0B9D2356242C0046F3FF /* Detail */,
 				59017BD82354D5A700C4EE90 /* Schedule */,
 				59BD1C72234EC70200C24D0E /* Main */,
 			);
@@ -184,6 +191,16 @@
 				5960D136234BF2970022EDD1 /* Info.plist */,
 			);
 			path = RwTickets;
+			sourceTree = "<group>";
+		};
+		59BD0B9D2356242C0046F3FF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				59BD0B9E2356243F0046F3FF /* DetailViewController.swift */,
+				59BD0BA22356245B0046F3FF /* DetailViewModel.swift */,
+				59BD0BA02356244E0046F3FF /* DetailCoordinator.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		59BD1C6D234EBDA000C24D0E /* Services */ = {
@@ -342,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BD0BA12356244E0046F3FF /* DetailCoordinator.swift in Sources */,
 				59BD0B9C2355EB010046F3FF /* TrainRoute.swift in Sources */,
 				59BD1C71234EBDE000C24D0E /* MainViewModel.swift in Sources */,
 				59017BF42354E6AA00C4EE90 /* ParseService.swift in Sources */,
@@ -349,6 +367,8 @@
 				59B5F1D12350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift in Sources */,
 				59017BE02354D63E00C4EE90 /* ScheduleViewController.swift in Sources */,
 				59017BD323548D4900C4EE90 /* ValidateService.swift in Sources */,
+				59BD0B9F2356243F0046F3FF /* DetailViewController.swift in Sources */,
+				59BD0BA32356245B0046F3FF /* DetailViewModel.swift in Sources */,
 				59017BF22354E69000C4EE90 /* NetworkService.swift in Sources */,
 				5960D12D234BF2960022EDD1 /* MainViewController.swift in Sources */,
 				59BD1C6F234EBDD600C24D0E /* MainCoordinator.swift in Sources */,

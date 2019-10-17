@@ -55,6 +55,7 @@ class TrainTableViewCell: UITableViewCell {
         self.subviews.forEach { view in
             view.alpha = Date() < formatter.date(from: date)! ? 1 : 0.6
         }
+        self.isUserInteractionEnabled = Date() < formatter.date(from: date)! ? true : false
     }
     
     private func buildPlaceInfoView(with trainPlace: TrainPlace) -> UIView {

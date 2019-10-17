@@ -278,6 +278,41 @@
             </objects>
             <point key="canvasLocation" x="817.5" y="25.35211267605634"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="t6K-W4-bJP">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="yqS-ZQ-K7x" customClass="DetailViewController" customModule="RwTickets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5At-VO-yeT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DETAIL VIEW CONTROLLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-5g-cMX">
+                                <rect key="frame" x="53" y="127" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lC-Kf-Hlo">
+                                <rect key="frame" x="137" y="416" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iib-h0-2k5" firstAttribute="bottom" secondItem="5lC-Kf-Hlo" secondAttribute="bottom" constant="122" id="9Ht-7t-I2I"/>
+                            <constraint firstItem="5lC-Kf-Hlo" firstAttribute="centerX" secondItem="iib-h0-2k5" secondAttribute="centerX" id="JQB-CO-LiA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iib-h0-2k5"/>
+                    </view>
+                    <connections>
+                        <outlet property="seekTicketButton" destination="5lC-Kf-Hlo" id="cQV-ku-aN9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obx-bO-48r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="25"/>
+        </scene>
     </scenes>
     <resources>
         <image name="054121908" width="1920" height="1200"/>

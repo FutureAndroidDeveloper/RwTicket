@@ -96,7 +96,7 @@ class ParseService {
             placesList.append(trainPlace)
         }
         
-        let newTrain = Train(name: textName!, number: textId!, departureCity: textDepCity!, arrivalCity: textArrCity!, departureTime: textDepTime!, arrivalTime: String(textArrTime!), arrivalDate: String(textArrDate?.dropFirst() ?? ""), roadTime: textRoadTime!, type: trainType!, places: placesList)
+        let newTrain = Train(name: textName!, number: textId!, departureCity: textDepCity!, arrivalCity: textArrCity!, departureTime: textDepTime!, arrivalTime: String(textArrTime!), departurDate: nil, arrivalDate: String(textArrDate?.dropFirst() ?? ""), roadTime: textRoadTime!, type: trainType!, places: placesList)
         return newTrain
     }
 }
