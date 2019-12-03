@@ -16,10 +16,7 @@ struct TrainRoute {
     init(from departure: String, to arrival: String, date: String) {
         departureCity = departure
         arrivalCity = arrival
-        
         // dd.mm.yyyy to yyyy-mm-dd
-        self.date = date.split(separator: ".").reversed().map(String.init).reduce("") { previous, current -> String in
-            previous + current + "-"
-        }.dropLast().description
+        self.date = date.split(separator: ".").reversed().joined(separator: "-")
     }
 }

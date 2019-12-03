@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 
 class MainCoordinator: BaseCoordinator<Void> {
-    
     private let window: UIWindow
     
     init(window: UIWindow) {
@@ -21,7 +20,6 @@ class MainCoordinator: BaseCoordinator<Void> {
         let mainViewController = MainViewController.initFromStoryboard()
         let mainViewModel = MainViewModel()
         let navigationController = UINavigationController(rootViewController: mainViewController)
-        
         mainViewController.viewModel = mainViewModel
         
         mainViewModel.searchTapped
@@ -33,7 +31,6 @@ class MainCoordinator: BaseCoordinator<Void> {
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        
         return .never()
     }
     

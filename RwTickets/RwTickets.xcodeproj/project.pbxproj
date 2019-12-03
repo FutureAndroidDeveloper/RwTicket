@@ -20,6 +20,7 @@
 		59017BF02354DF4500C4EE90 /* TrainPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BEF2354DF4500C4EE90 /* TrainPlace.swift */; };
 		59017BF22354E69000C4EE90 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BF12354E69000C4EE90 /* NetworkService.swift */; };
 		59017BF42354E6AA00C4EE90 /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59017BF32354E6AA00C4EE90 /* ParseService.swift */; };
+		592D13AD239125C40007DE3B /* TelegramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D13AC239125C40007DE3B /* TelegramService.swift */; };
 		5960D12B234BF2960022EDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960D12A234BF2960022EDD1 /* AppDelegate.swift */; };
 		5960D12D234BF2960022EDD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960D12C234BF2960022EDD1 /* MainViewController.swift */; };
 		5960D130234BF2960022EDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5960D12E234BF2960022EDD1 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		59017BEF2354DF4500C4EE90 /* TrainPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPlace.swift; sourceTree = "<group>"; };
 		59017BF12354E69000C4EE90 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		59017BF32354E6AA00C4EE90 /* ParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
+		592D13AC239125C40007DE3B /* TelegramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramService.swift; sourceTree = "<group>"; };
 		5960D127234BF2960022EDD1 /* RwTickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RwTickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5960D12A234BF2960022EDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5960D12C234BF2960022EDD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				59017BD223548D4900C4EE90 /* ValidateService.swift */,
 				59017BF12354E69000C4EE90 /* NetworkService.swift */,
 				59017BF32354E6AA00C4EE90 /* ParseService.swift */,
+				592D13AC239125C40007DE3B /* TelegramService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				59BD0BA12356244E0046F3FF /* DetailCoordinator.swift in Sources */,
 				59BD0B9C2355EB010046F3FF /* TrainRoute.swift in Sources */,
 				59BD1C71234EBDE000C24D0E /* MainViewModel.swift in Sources */,
+				592D13AD239125C40007DE3B /* TelegramService.swift in Sources */,
 				59017BF42354E6AA00C4EE90 /* ParseService.swift in Sources */,
 				59017BDE2354D61500C4EE90 /* ScheduleCoordinator.swift in Sources */,
 				59B5F1D12350E96A002903E4 /* SkyFloatingLabelTextField+Rx.swift in Sources */,

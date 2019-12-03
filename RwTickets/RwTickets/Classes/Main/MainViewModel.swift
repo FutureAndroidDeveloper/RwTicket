@@ -24,7 +24,7 @@ class MainViewModel {
     let dateError: Observable<String?>
     let searchTapped: Observable<TrainRoute>
     
-    init(validateService: ValidateService = ValidateService()) {
+    init(validateService: Validating = ValidateService()) {
         let _departureCity = PublishSubject<String?>()
         departureCity = _departureCity.asObserver()
         
@@ -42,7 +42,7 @@ class MainViewModel {
         
         let departureErrorStatus = _departureCity
             .compactMap{ $0 }
-            .map { validateService.isRussian(text: $0) }
+            .map { validateService.validate(data: $0, for: .isRussian) }
             .share(replay: 1, scope: .whileConnected)
         
         departureErrorStatus
@@ -62,7 +62,7 @@ class MainViewModel {
         
         let arrivalErrorStatus = _arrivalCity
             .compactMap{ $0 }
-            .map { validateService.isRussian(text: $0) }
+            .map { validateService.validate(data: $0, for: .isRussian) }
             .share(replay: 1, scope: .whileConnected)
         
         arrivalErrorStatus
@@ -83,7 +83,7 @@ class MainViewModel {
         let dateErrorStatus = _date
             .skip(2)
             .compactMap{ $0 }
-            .map { validateService.isDateValid(text: $0) }
+            .map { validateService.validate(data: $0, for: .dateIsValid) }
             .share(replay: 1, scope: .whileConnected)
         
         dateErrorStatus
@@ -103,7 +103,7 @@ class MainViewModel {
         
         // seacrh only when all fields are filled without errors
         searchTapped = _search.asObservable().withLatestFrom(travelData)
-            .filter { validateService.validateTravelData($0) }
+            .filter { validateService.validate(data: $0, for: .travelDataIsValid) }
             .map { routeData -> TrainRoute in
                 return TrainRoute(from: routeData.0!, to: routeData.2!, date: routeData.4!)
             }

@@ -10,6 +10,10 @@ import Foundation
 import SwiftSoup
 import RxSwift
 
+protocol Parsing {
+    func parse(from html: String) -> Self
+}
+
 class ParseService {
     func parseTrains(with html: String) -> Observable<[Train]> {
         return Observable<[Train]>.create { [weak self] observer in
@@ -22,7 +26,6 @@ class ParseService {
             do {
                 let doc: Document = try SwiftSoup.parse(html)
                 let htmlTrains: Elements = try doc.select("tr")
-                
                 htmlTrains.forEach { train in
                     guard let newTrain = self.buildTrain(for: train) else {
                         return
@@ -56,7 +59,6 @@ class ParseService {
         let type = try? element.select("div.train_description")
         let noteList = try? element.select("li.train_note")
         
-        
         let textPlace = try? place?.text()
         let textPrice = try? price?.text()
         let textId = try? id?.text()
@@ -79,7 +81,7 @@ class ParseService {
         let placeList = textPlace?.split(separator: " ").map(String.init)
         let placeTypeList = textNoteList?.map(String.init)
         
-        guard let traintType = trainType else {
+        guard let _ = trainType else {
             print("UNKOWN train TYPE --> \(textType ?? "nil")")
             return nil
         }

@@ -16,6 +16,6 @@ struct TrainPlace {
 
 extension TrainPlace: CustomStringConvertible {
     var description: String {
-        return (placeType ?? "") + " " + placeCost.trimmingCharacters(in: CharacterSet.whitespaces) + " " + String((vacantPlace ?? 0))
+        return "\(placeType ?? "") \(placeCost.trimmingCharacters(in: CharacterSet.whitespaces)) \(vacantPlace ?? 0)"
     }
 }

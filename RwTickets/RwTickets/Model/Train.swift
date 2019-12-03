@@ -41,3 +41,15 @@ extension Train: Equatable {
             lhs.number == rhs.number
     }
 }
+
+extension Train: CustomStringConvertible {
+    var description: String {
+        let formattedPlaces = places.map { $0.description }.joined(separator: "\n")
+        return """
+        \(departurDate ?? "")\n
+        \(departureCity) -> \(arrivalCity)
+        \(departureTime) -> \(arrivalTime) \(arrivalDate ?? "")\n
+        \(formattedPlaces)
+        """
+    }
+}

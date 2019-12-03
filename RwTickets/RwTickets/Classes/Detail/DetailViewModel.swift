@@ -15,11 +15,11 @@ enum CustomError: Error {
 }
 
 class DetailViewModel {
-    
     // MARK: - Propeties
     private let bag = DisposeBag()
     private var trainValue: Train!
     private let networkService: NetworkService!
+    private let telegramService: Telegram!
     private let parseService: ParseService!
     
     // MARK: - Input
@@ -31,9 +31,11 @@ class DetailViewModel {
     let telegramMessage: Observable<String>
     
     init(networkService: NetworkService = NetworkService(),
-         parseService: ParseService = ParseService()) {
+         parseService: ParseService = ParseService(),
+         telegramService: Telegram = TelegramService()) {
         self.networkService = networkService
         self.parseService = parseService
+        self.telegramService = telegramService
         
         let _train = PublishSubject<Train>()
         train = _train.asObserver()
@@ -79,7 +81,7 @@ class DetailViewModel {
         isFreePlace.withLatestFrom(_train)
             .flatMap { [weak self] train -> Observable<String> in
                 guard let self = self else { return .empty() }
-                return self.networkService.sendMessage(train)
+                return self.telegramService.sendMessage(train)
             }
             .bind(to: _message)
             .disposed(by: bag)

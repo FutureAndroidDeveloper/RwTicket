@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GH6-40-z2o">
-                        <rect key="frame" x="20" y="129" width="447" height="179"/>
+                        <rect key="frame" x="20" y="129.5" width="447" height="178.5"/>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="634БЩ Минск-Пассажирский — Орша-Центральная " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-sa-UCx">
-                        <rect key="frame" x="94.5" y="55" width="372.5" height="41"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="634БЩ Минск-Пассажирский — Орша-Центральная " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-sa-UCx">
+                        <rect key="frame" x="94.5" y="55" width="372.5" height="44.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -59,8 +59,9 @@
                     <constraint firstItem="vzb-wD-iDW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="5a7-ma-ukO"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GH6-40-z2o" secondAttribute="trailing" id="8C5-74-fcx"/>
                     <constraint firstItem="GH6-40-z2o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HVY-7Z-RYI"/>
-                    <constraint firstItem="GH6-40-z2o" firstAttribute="top" secondItem="vzb-wD-iDW" secondAttribute="bottom" constant="19.5" id="NXD-UY-eOh"/>
+                    <constraint firstItem="GH6-40-z2o" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vzb-wD-iDW" secondAttribute="bottom" constant="20" id="NXD-UY-eOh"/>
                     <constraint firstItem="gLN-Uo-78i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="OzZ-1I-MLT"/>
+                    <constraint firstItem="GH6-40-z2o" firstAttribute="top" secondItem="xuX-sa-UCx" secondAttribute="bottom" constant="30" id="Pzo-Q8-ouK"/>
                     <constraint firstItem="xuX-sa-UCx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="YSq-Io-z5c"/>
                     <constraint firstItem="vzb-wD-iDW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="fZh-rF-PUj"/>
                     <constraint firstItem="gLN-Uo-78i" firstAttribute="leading" secondItem="vzb-wD-iDW" secondAttribute="trailing" constant="7.5" id="ibX-k6-vTs"/>

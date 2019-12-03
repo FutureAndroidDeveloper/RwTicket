@@ -24,7 +24,6 @@ class DetailCoordinator: BaseCoordinator<Void> {
         
         detailViewController.viewModel = detailViewModel
         navigationController.pushViewController(detailViewController, animated: true)
-        
         detailViewModel.train.onNext(train)
         
         return navigationController.rx.willShow

@@ -13,7 +13,6 @@ import RxCocoa
 import SkyFloatingLabelTextField
 
 class MainViewController: UIViewController, StoryboardInitializable {
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var departureCityTextField: SkyFloatingLabelTextField!
@@ -65,7 +64,6 @@ class MainViewController: UIViewController, StoryboardInitializable {
     }
     
     // MARK: - Private Methods
-    
     private func setupBindings() {
         dateTextField.rx.controlEvent(.editingDidBegin)
             .subscribe(onNext: { [weak self] _ in
